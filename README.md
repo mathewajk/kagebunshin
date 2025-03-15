@@ -16,12 +16,14 @@ Create and activate a Python environment:
 cd kagebunshin
 python -m venv env
 source env/bin/activate
+```
 
 Install Python requirements:
 
 ```
 cd backend
 pip install -r requirements.txt
+```
 
 Install frontend requirements:
 
