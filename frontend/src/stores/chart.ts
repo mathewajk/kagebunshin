@@ -59,10 +59,10 @@ export const useChartStore = defineStore('chart', () => {
   
   const pitchChartOptions = {
     ...baseChartOptions,
-    aspectRatio: 1,
+    aspectRatio: 2,
     scales: {
       ...baseChartOptions.scales,
-      y: { ...baseChartOptions.scales.y, min: 50 }
+      y: { ...baseChartOptions.scales.y }
     }
   }
 
@@ -71,7 +71,7 @@ export const useChartStore = defineStore('chart', () => {
     aspectRatio: 2,
     scales: {
       ...baseChartOptions.scales,
-      y: { ...baseChartOptions.scales.y, min: 0 }
+      y: { ...baseChartOptions.scales.y, min: 0, max: 3000 }
     }
   }
 

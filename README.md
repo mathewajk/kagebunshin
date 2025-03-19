@@ -1,10 +1,8 @@
-# Kagebunshin
+# Shadow Anything
 
-![Kagebunshin](kagebunshin.png)
+![Shadow Anything](shadow.png)
 
-I swear I will change the name at some point.
-
-This webapp works best with audio routers like [Loopback](https://rogueamoeba.com/loopback/) for macOS. It allows you to record in a reference word, sentence, etc., then record your own voice for comparison.
+This webapp works best with audio routers like [Loopback](https://rogueamoeba.com/loopback/) for macOS (or a patient friend). It allows you to record in a reference word, sentence, etc., then record your own voice for comparison.
 
 Developed with Japanese in mind, its primary output is a graph of your pitch over time (for pitch accent comparison). It can also display vowel formants, but the output may be messy depending on the quality of your recording environment.
 
@@ -13,7 +11,6 @@ Developed with Japanese in mind, its primary output is a graph of your pitch ove
 Create and activate a Python environment:
 
 ```
-cd kagebunshin
 python -m venv env
 source env/bin/activate
 ```

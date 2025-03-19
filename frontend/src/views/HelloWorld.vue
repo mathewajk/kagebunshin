@@ -2,8 +2,8 @@
     <div class="grid-wrapper">
       <div class="menu-panel">
         <div class="header">
-          <h1>kagebunshin.</h1>
-          <div class="shadow">kagebunshin.</div>
+          <h1>shadow anything.</h1>
+          <div class="shadow">shadow anything.</div>
         </div>
         <div class="options">
           <h2>Options</h2>
@@ -139,7 +139,9 @@ export default {
         fill: false,
         borderColor: '#f93ab7',
         backgroundColor: '#f93ab7',
-        data: this.audioData.reference.pitchData.map((value) => ({ x: value[0], y: value[1] }))
+        data: this.audioData.reference.pitchData.map((value) => ({ x: value[0], y: value[1] })).filter((value) => {
+          return value.y != 0;
+        })
       }
     },
     ownPitchChartData() {
@@ -148,7 +150,9 @@ export default {
         fill: false,
         borderColor: '#a0f063',
         backgroundColor: '#a0f063',
-        data: this.audioData.own.pitchData.map((value) => ({ x: value[0], y: value[1] }))
+        data: this.audioData.own.pitchData.map((value) => ({ x: value[0], y: value[1] })).filter((value) => {
+          return value.y != 0;
+        })
       }
     },
     formantChartData() {
@@ -227,7 +231,7 @@ h1 {
   transform: scaleX(-1) rotate(-180deg);
   position: absolute;
   font-size: 2rem;
-  top: 2.3rem;
+  top: 2.2rem;
   left: 0;
   opacity: 0.2;
 }
@@ -313,14 +317,14 @@ a:hover .icon {
   grid-template-columns: 1fr;
   gap: 20px;
 }
-
+/* 
 .pitch-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
   gap: 20px;
-}
+} */
 
-.formant-grid {
+.formant-grid, .pitch-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
